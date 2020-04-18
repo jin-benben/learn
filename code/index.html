@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #container{
+      display:flex;
+      height: 300px;
+      background-color: #9999;
+    }
+  </style>
+</head>
+<body>
+  <div id="container">
+    sss
+  </div>
+  <script src="debounce_throttle.js"></script>
+  <script>
+    var container=document.getElementById('container');
+    var count=0;
+    function add(){
+      count++;
+      container.innerHTML=count
+    }
+   
+    container.onmousemove=debounce(add,1000)
+   //  container.onmousemove=throttle1(add,1000)
+   //  container.onmousemove=throttle2(add,1000)
+  </script>
+</body>
+</html>
